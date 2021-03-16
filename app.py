@@ -28,5 +28,4 @@ def test_generate_names():
 def test_generate_names_check_type():
     """This is a test for generate_names to check type"""
     namelist1 = generate_names(101)
-    assert type(namelist1) == list
-
+    assert isinstance(namelist1) == list
