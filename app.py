@@ -7,7 +7,7 @@ app = Flask(__name__)
 def generate_names(numberofnames):
     """Generate random names"""
     nlist = []
-    for i in range(numberofnames+1):
+    for i in range(numberofnames):
         nlist.append(names.get_full_name())
         print(i)
 
@@ -28,4 +28,4 @@ def test_generate_names():
 def test_generate_names_check_type():
     """This is a test for generate_names to check type"""
     namelist1 = generate_names(101)
-    assert isinstance(namelist1) == list
+    assert isinstance(namelist1, list)
