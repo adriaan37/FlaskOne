@@ -11,7 +11,7 @@ def generate_names(numberofnames):
         nlist.append(names.get_full_name())
         print(i)
 
-    return nlist1
+    return nlist
 
 namelist = generate_names(50)
 
