@@ -22,10 +22,15 @@ def home():
 
 def test_generate_names():
     """This is a test for generate_names"""
-    namelist1 = generate_names(101)
-    assert len(namelist1) == 101
+    namelist = generate_names(101)
+    assert len(namelist) == 101
 
 def test_generate_names_check_type():
     """This is a test for generate_names to check type"""
-    namelist1 = generate_names(101)
-    assert isinstance(namelist1, list)
+    namelist = generate_names(101)
+    assert isinstance(namelist, list)
+
+def test_generate_names_check_values():
+    """This is a test to check that the names produced are all strings"""
+    namelist= generate_names(50)
+    assert isinstance(namelist[i],str)
