@@ -1,7 +1,8 @@
 """This is the main flask app file"""
+import random
 from flask import Flask, render_template
 import names
-import random
+
 
 app = Flask(__name__)
 
