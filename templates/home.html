@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h1>Home</h1> 
-        <p><a href="/about">Click here for about page</a></p>
-        <p>{{ email }}</p>
+        <h1>Names</h1> 
+        <p><i>Here is a list of random names:</i></p>
+        <ul>
+        {% for name in namelist %}
+            <li>{{ name }}</li>
+        {% endfor %}
+        </ul>
     </body>
 </html>

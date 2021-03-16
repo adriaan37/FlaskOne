@@ -1,14 +1,19 @@
 from flask import Flask, render_template
+import names
 
 app = Flask(__name__)
 
-email1="info@thebestone.com"
-names = ["Andy", "Ben", "Charlie", "Devon", "Errol", "Frans", "Greg"]
+#Generate random names
+def GenerateNames(numberofnames):
+    nlist = []
+    for i in range(numberofnames):
+        nlist.append(names.get_full_name())
 
+    return nlist
+
+namelist = GenerateNames(50)
+
+#Homepage
 @app.route('/')
 def home():
-    return render_template('home.html', email=email1)
-
-@app.route('/about')
-def about():
-    return  render_template('about.html', nameslist=names)
+    return render_template('home.html', namelist=namelist)
