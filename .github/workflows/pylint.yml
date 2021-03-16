@@ -22,3 +22,6 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint `ls -R|grep .py$|xargs`
+    - name: Test with pytest
+      run: |
+        pytest app.py

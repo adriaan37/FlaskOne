@@ -19,3 +19,7 @@ namelist = generate_names(50)
 def home():
     """Render Homepage"""
     return render_template('home.html', namelist=namelist)
+
+def test_generate_names():
+    namelist1 = generate_names(101)
+    assert len(namelist1) == 101
