@@ -1,4 +1,5 @@
 """This is the main flask app file"""
+from random import randint, random
 from flask import Flask, render_template
 import names
 
@@ -29,3 +30,10 @@ def test_generate_names_check_type():
     """This is a test for generate_names to check type"""
     namelist = generate_names(101)
     assert isinstance(namelist, list)
+
+def test_generate_names_check_string():
+    """This is a test to check if the names generated are strings"""
+    namelist = generate_names(50)
+    i = randint(1,50)
+    assert isinstance(namelist[i], str)
+    
