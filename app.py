@@ -21,5 +21,7 @@ def home():
     return render_template('home.html', namelist=namelist)
 
 def test_generate_names():
+    """This is a test for generate_names"""
     namelist1 = generate_names(101)
     assert len(namelist1) == 101
+    
